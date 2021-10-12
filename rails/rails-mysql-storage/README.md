@@ -14,8 +14,8 @@
     gem list bundler
    ```
 
-3. Create a new rails 5.2.6 site with **`rails _5.2.6_ new <name>` **
-4. Cd into <name> directory
+3. Create a new rails 5.2.6 site with **`rails _5.2.6_ new <name>`**
+4. Cd into `<name>` directory and serve the app.
 5. You can start your server with the following commands:
    - `rails server` or with `bundle exec rails server`: This will start your server with localhost:3000 but it can be reached outside
    - `rails server -b 0.0.0.0`: This will start your server binding all ip addresses and use port 3000 (default port)
@@ -23,7 +23,8 @@
 6. Browse to `http://localhost:3000` and get the home page.
 
 # Creating a MVC Blog with scaffold
-1. A scaffold is a set of automatically generated files which forms the basic structure of a Rails project. You can use a scaffold template which contains a controller, mode and view for every action (index, edit, show, new) and a new route. Create a Post structure with **`rails g scaffold Post title:string body:text`**
+1. A scaffold is a set of automatically generated files which forms the basic structure of a Rails project. You can use a scaffold template which contains a controller, mode and view for every action (index, edit, show, new) and a new route. 
+   Create a Post structure with **`rails g scaffold Post title:string body:text`**
 2. Since SQLite3 is by default configured in Rails, you can prepare your database and create an schema with **`rails db:migrate`**
 3. Run your application with **`rails server -b 0.0.0.0`** and browse to `http://localhost:3000/posts`, you can add several posts, modify and delete.
 
@@ -39,15 +40,16 @@
    class Post < ApplicationRecord
      has_one_attached :header_image
    end
-  ```
-   > This type specifies the relation between a single attachment and the model.
+   ```
+ 
+   >This type specifies the relation between a single attachment and the model.
+
 3. Modify function **`post_params`** inside this file **`app/controllers/posts_controller.rb`** and add the new parameter:
    
    ```ruby
    def post_params
      params.require(:post).permit(:title, :body, :header_image)
    end
-
    ```
 
 4. Add the field inside this file **`app/views/posts/_form.html.erb`** 
