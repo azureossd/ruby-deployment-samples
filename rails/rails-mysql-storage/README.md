@@ -32,7 +32,7 @@
 1. Active Storage facilitates uploading files to different services, by default it is configured to disk. There are several requirements depending on the Rails version that you are using, please run the following commands to prepare the app for storage:
    - Install imagemagick with **`sudo apt-get install -y imagemagick`**   
    - Install Active Storage with **`rails active_storage:install`**
-   - Modify Gemfile and add the following gem: **`gem 'mini_magick', '~> 4.8'`**
+   - Modify your **Gemfile** file and add the following gem: **`gem 'mini_magick', '~> 4.8'`**
    - Run **`bundle install`** to install mini_magick gem.
 2. Add the following content to file **`app/models/post.rb`**
    
