@@ -1,2 +1,2 @@
 require "./index"
-run MyApp
+run Sinatra::Application
