@@ -17,7 +17,7 @@
 3. Create a new rails 5.2.6 site with **`rails _5.2.6_ new <name>`**
 4. Cd into `<name>` directory and serve the app.
 5. You can start your server with the following commands:
-   - `rails server` or with `bundle exec rails server`: This will start your server with localhost:3000 but it can be reached outside
+   - `rails server` or with `bundle exec rails server`: This will start your server with localhost:3000 but it will just listening on localhost and not all ip addresses, if you are requesting from outside your dev environment it will not reach the server.
    - `rails server -b 0.0.0.0`: This will start your server binding all ip addresses and use port 3000 (default port)
    - `rails server -b 0.0.0.0 -p <port>` : This will start your server binding all ip addresses and use a custom port.
 6. Browse to `http://localhost:3000` and get the home page.
