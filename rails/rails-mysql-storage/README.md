@@ -106,7 +106,7 @@
 
 # Integrate MySQL database with your Rails app
 
-1. Install Docker with the following commands. If you have already docker skip these steps:
+1. Install Docker with the following commands one by one. If you have already docker skip these steps:
 
    ```bash
    sudo apt update
@@ -132,6 +132,10 @@
    sudo usermod -aG sudo $USER
 
    sudo systemctl start docker
+   
+   sudo su
+   
+   su <youruser>
 
    ```
 
