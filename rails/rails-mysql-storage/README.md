@@ -4,7 +4,7 @@
    ```bash
     gem install rails -v 5.2.6
     gem install rails -v 6.1.4.1
-    gem install bundler -v 1.17.2
+    gem install bundler -v 2.1.4
    ```
 
 2. List the installed gems with:
