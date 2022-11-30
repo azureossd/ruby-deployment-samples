@@ -14,7 +14,7 @@ RUN bundle install --without development test
 
 COPY . .
 
-RUN bundle exec rake assets:precompile
+RUN SECRET_KEY_BASE=`bundle exec rake secret` bundle exec rake assets:precompile
 
 #Final Stage
 FROM ruby:2.6.2-alpine3.9
