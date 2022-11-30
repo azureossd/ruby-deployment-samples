@@ -1,6 +1,7 @@
 #Builder
-FROM ruby:2.6.2-alpine3.9 as builder
+FROM ruby:2.7.3-alpine3.13 as builder
 
+ARG SECRET
 ENV RAILS_ENV=production
 ENV RAILS_SERVE_STATIC_FILES=true
 
@@ -10,14 +11,15 @@ WORKDIR /app
 
 COPY Gemfile* ./
 
-RUN bundle install --without development test
+RUN `bundle config set without 'development test'`
+RUN bundle install 
 
 COPY . .
 
-RUN SECRET_KEY_BASE=`bundle exec rake secret` bundle exec rake assets:precompile
+RUN SECRET_KEY_BASE=${SECRET} bundle exec rake assets:precompile
 
 #Final Stage
-FROM ruby:2.6.2-alpine3.9
+FROM ruby:2.7.3-alpine3.13
 
 RUN apk add --update sqlite-dev
 

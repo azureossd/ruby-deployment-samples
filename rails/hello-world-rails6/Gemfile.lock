@@ -177,6 +177,8 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    tzinfo-data (1.2022.7)
+      tzinfo (>= 1.0.0)
     web-console (4.1.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -215,13 +217,13 @@ DEPENDENCIES
   spring
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
-  tzinfo-data
+  tzinfo-data (~> 1.2021, >= 1.2021.3)
   web-console (>= 4.1.0)
   webdrivers
   webpacker (~> 5.0)
 
 RUBY VERSION
-   ruby 2.6.2p47
+   ruby 2.7.3p183
 
 BUNDLED WITH
-   1.17.2
+   2.1.4
