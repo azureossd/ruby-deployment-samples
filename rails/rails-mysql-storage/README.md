@@ -106,7 +106,7 @@
 
 # Integrate MySQL database with your Rails app
 
-1. Install Docker with the following commands one by one. If you have already docker skip these steps:
+1. If you are using WSL you can use Docker Desktop and enable WSL2 integration from settings. If you are using a Linux VM then install Docker with the following commands one by one. If you have already docker skip these steps:
 
    ```bash
    sudo apt update
