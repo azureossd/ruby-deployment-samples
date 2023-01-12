@@ -1,4 +1,4 @@
-FROM ruby:2.6.8-slim-buster
+FROM ruby:2.7.3-slim-buster
 
 WORKDIR /app
 
