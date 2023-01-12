@@ -20,13 +20,13 @@
    - `rails server` or with `bundle exec rails server`: This will start your server with localhost:3000 but it will just listening on localhost and not all ip addresses, if you are requesting from outside your dev environment it will not reach the server.
    - `rails server -b 0.0.0.0`: This will start your server binding all ip addresses and use port 3000 (default port)
    - `rails server -b 0.0.0.0 -p <port>` : This will start your server binding all ip addresses and use a custom port.
-6. Browse to `http://localhost:3000` and get the home page.
+6. Browse to `http://<localhost_or_custom_domain>:3000` and get the home page.
 
 # Creating a MVC Blog with scaffold
 1. A scaffold is a set of automatically generated files which forms the basic structure of a Rails project. You can use a scaffold template which contains a controller, mode and view for every action (index, edit, show, new) and a new route. 
    Create a Post structure with **`rails g scaffold Post title:string body:text`**
 2. Since SQLite3 is by default configured in Rails, you can prepare your database and create an schema with **`rails db:migrate`**
-3. Run your application with **`rails server -b 0.0.0.0`** and browse to `http://localhost:3000/posts`, you can add several posts, modify and delete.
+3. Run your application with **`rails server -b 0.0.0.0`** and browse to `http://<localhost_or_custom_domain>:3000/posts`, you can add several posts, modify and delete.
 
 # Integrating Disk Storage
 1. Active Storage facilitates uploading files to different services, by default it is configured to disk. There are several requirements depending on the Rails version that you are using, please run the following commands to prepare the app for storage:
@@ -101,7 +101,7 @@
     end
     ```
 
-9. Run the server `rails server -b 0.0.0.0` and browse the site to `http://localhost:3000`. Add some posts uploading images and see the storage folder structure.
+9. Run the server `rails server -b 0.0.0.0` and browse the site to `http://<localhost_or_custom_domain>:3000`. Add some posts uploading images and see the storage folder structure.
 
 
 # Integrate MySQL database with your Rails app
