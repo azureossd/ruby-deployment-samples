@@ -1,5 +1,6 @@
 require 'sinatra'
+require 'geocoder'
 
 get '/' do
-  'Hello world from Sinatra!'
+  'You are coming from here: ' + request.location.inspect
 end
