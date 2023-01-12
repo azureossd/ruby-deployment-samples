@@ -103,6 +103,7 @@
 
 9. Run the server `rails server -b 0.0.0.0` and browse the site to `http://<localhost_or_custom_domain>:3000`. Add some posts uploading images and see the storage folder structure.
 
+> **Note**: If you are getting `Migrations are pending error`, then run this command `rails db:migrate` and retry `rails server -b 0.0.0.0`
 
 # Integrate MySQL database with your Rails app
 
