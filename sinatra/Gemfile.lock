@@ -2,7 +2,10 @@ GEM
   remote: https://rubygems.org/
   specs:
     base64 (0.3.0)
-    geocoder (1.8.1)
+    csv (3.3.5)
+    geocoder (1.8.6)
+      base64 (>= 0.1.0)
+      csv (>= 3.0.0)
     logger (1.7.0)
     mustermann (3.0.4)
       ruby2_keywords (~> 0.0.1)
