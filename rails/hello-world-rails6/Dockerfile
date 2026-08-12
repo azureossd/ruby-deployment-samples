@@ -1,5 +1,5 @@
 #Builder
-FROM ruby:2.7.3-alpine3.13 as builder
+FROM ruby:3.0.3-alpine3.13 as builder
 
 ARG SECRET
 ENV RAILS_ENV=production
@@ -19,7 +19,7 @@ COPY . .
 RUN SECRET_KEY_BASE=${SECRET} bundle exec rake assets:precompile
 
 #Final Stage
-FROM ruby:2.7.3-alpine3.13
+FROM ruby:3.0.3-alpine3.13
 
 RUN apk add --update sqlite-dev
 
